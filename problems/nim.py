@@ -1,6 +1,6 @@
-import abstractproblems
+import problems.abstract
 from copy import deepcopy
-class NimProblem(abstractproblems.TreeProblem):
+class NimProblem(problems.abstract.TreeProblem):
     def __init__(self, startvalue = 7, maxStarts=True):
         start = startvalue if isinstance(startvalue, list) else [startvalue]
         self.rootnode = NimNode(start, self, 1, maxStarts)
@@ -21,7 +21,7 @@ class NimProblem(abstractproblems.TreeProblem):
             else:
                 graph.node(str(node),str(node.sticks))
 
-class NimNode(abstractproblems.AdversarialTreeNode):
+class NimNode(problems.abstract.AdversarialTreeNode):
     def __init__(self, sticks, base, depth, maximising=True):
         self.sticks = sticks
         self.base = base
