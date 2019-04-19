@@ -66,3 +66,6 @@ class NimNode(problems.abstract.AdversarialTreeNode):
 
     def maximisingPlayer(self):
         return self.maximising
+    
+    def endUtility(self):
+        return 0 if self.maximisingPlayer() else 1
