@@ -58,16 +58,16 @@ class TreeNode(ABC):
     @abstractmethod
     def children(self):
         pass
+    
+
 
 class CostTreeNode(TreeNode):
     @abstractmethod
     def fcost(self):
         pass
-
-class HeuristicTreeNode(CostTreeNode):
-    @abstractmethod
+    
     def hcost(self):
-        pass
+        return 0 #Turn A* into UCS
 
 class AdversarialTreeNode(TreeNode):
     @abstractmethod
