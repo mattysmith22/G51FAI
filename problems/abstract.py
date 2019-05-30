@@ -51,7 +51,7 @@ class TreeNode(ABC):
     def __repr__(self):
         pass
     
-    @abstractmethodutility
+    @abstractmethod
     def endState(self):
         pass
     
